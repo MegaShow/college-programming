@@ -1,0 +1,31 @@
+/* Mega Show */
+
+body {
+  background-attachment: fixed;
+  background-color: white;
+  background-image: url(https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg);
+  color: #404040;
+  font-size: 12pt;
+  font-family: consolas, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  background-color: #F0F0F0;
+  color: #A4A400;
+  font-size: 32pt;
+}
+
+h2 {
+  background-color: #F0F0F0;
+  color: #A4A400;
+  font-size: 20pt;
+}
+
+img {
+  border-width: 5px;
+  border-radius: 10px;
+  height: 200px;
+  margin: 20px;
+  width: 200px;
+}

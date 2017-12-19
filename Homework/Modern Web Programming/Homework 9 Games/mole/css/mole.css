@@ -1,0 +1,48 @@
+/* MegaShow */
+body {
+  min-width: 768px;
+}
+
+.game-window {
+  text-align: center;
+}
+
+.game-panel {
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+}
+
+.game-panel div button, #gameState {
+  margin: 0 25px;
+  width: 100px;
+}
+
+.game-panel div span {
+  width: 250px;
+}
+
+.game-panel input {
+  width: 100px;
+}
+
+.game-box {
+  margin: 50px auto;
+  width: 400px;
+}
+
+.game-box input {
+  height: 36px;
+  margin: 2px 2px;
+  width: 36px;
+}
+
+.game-footer {
+  margin: 0 auto;
+  text-align: center;
+  width: 720px;
+}
+
+.game-footer p, .game-footer h2 {
+  text-align: left;
+}

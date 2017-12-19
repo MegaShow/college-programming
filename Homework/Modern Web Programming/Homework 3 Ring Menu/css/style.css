@@ -1,0 +1,210 @@
+/* MegaShow */
+
+.apb {
+  bottom: 20%;
+  left: 50%;
+  position: fixed;
+  z-index: 1;
+}
+
+.icon {
+  background-color: #777FAA;
+  background-image: url(../assets/images/atplus_white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 100px;
+  height: 30px;
+  transition: .5s ease;
+  width: 30px;
+}
+
+.user span {
+  color: white;
+  font-size: 18pt;
+  padding-left: 5px;
+}
+
+.comment span {
+  color: white;
+  font-size: 24pt;
+  padding-left: 5px;
+}
+
+.mine {
+  color: #079E6E;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+#at-plus-container {
+  bottom: 20%;
+  left: 50%;
+  position: fixed;
+}
+
+#button #info-bar {
+  background-color: rgb(150, 150, 150);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  height: 0px;
+  opacity: 1;
+  position: relative;
+  transform: translateX(15px);
+  transition: opacity .5s ease-in;
+  transition: .5s ease;
+  width: 0px;
+}
+
+#button:hover #info-bar {
+  height: 130px;
+  width: 130px;
+  opacity: 1;
+  transform: translate(-40px, 120px);
+}
+
+#button #control-ring-container {
+  opacity: 0;
+  transition: .5s ease;
+}
+
+#button:hover #control-ring-container {
+  opacity: 1;
+}
+
+#button:hover #control-ring-container li {
+  height: 30px;
+  width: 30px;
+}
+
+#button:hover .icon {
+  background-image: url(../assets/images/atplus_green.png);
+  background-color: rgba(48, 63, 159, 1);
+  background-size: 80%;
+  height: 50px;
+  width: 50px;
+}
+
+#button .mask {
+  background-image: url(../assets/images/nomask.png);
+}
+
+#button:hover .mask {
+  transform: translate(-85px, 100px);
+}
+
+#button .history {
+  background-image: url(../assets/images/history.png);
+}
+
+#button:hover .history {
+  transform: translate(-90px, 110px);
+}
+
+#button .message {
+  background-image: url(../assets/images/message.png);
+}
+
+#button:hover .message {
+  transform: translate(-70px, 113px);
+}
+
+#button .setting {
+  background-image: url(../assets/images/setting.png);
+}
+
+#button:hover .setting {
+  transform: translate(-30px, 90px);
+}
+
+#button .sign {
+  background-image: url(../assets/images/signin.png);
+}
+
+#button:hover .sign {
+  transform: translate(5px, 45px);
+}
+
+#button .user {
+  height: 28px;
+  line-height: 28px;
+  margin-left: 15%;
+}
+
+#button .comment {
+  height: 42px;
+  line-height: 42px;
+  margin-left: 15%;
+  margin-top: 22%;
+}
+
+#button .mine {
+  height: 24px;
+  line-height: 24px;
+}
+
+#button .posted {
+  margin-left: 0%;
+  margin-top: 56%;
+}
+
+#button .like {
+  margin-left: 35%;
+  margin-top: 56%;
+}
+
+#button .unread {
+  background-color: red;
+  background-size: 100%;
+  border-radius: 100px;
+  color: white;
+  display: inline-block;
+  height: 16px;
+  font-size: 12px;
+  opacity: 0;
+  text-align: center;
+  transform: translate(16px, -9px);
+  transition: .5s ease;
+  transition: opacity .3s ease;
+  width: 16px;
+}
+
+#button:hover .unread {
+  opacity: 1;
+}
+
+#control-ring-container li {
+  background-color: rgb(126, 126, 126);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 100px;
+  height: 0px;
+  list-style-type: none;
+  transform: translateX(-30px);
+  transition: .5s ease;
+  width: 0px;
+}
+
+#info-bar ul {
+  list-style-type: none;
+  margin-left: 10px;
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+#info-bar ul li {
+  left: 0%;
+  position: absolute;
+}
+
+#info-bar ul li {
+  left: 20%;
+}
+
+#button:hover #info-bar ul {
+  opacity: 1;
+}
+

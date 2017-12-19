@@ -1,0 +1,12 @@
+let matrix = {
+  "http://www.sysu.edu.cn/2012/cn/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk01/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/jgsz/yx/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/xksz/xksz01/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx01/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/kxyj/kxyj01/kxyj01a/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/zsjy/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/rczp/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/xyjj/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "http://www.sysu.edu.cn/2012/cn/zjzd/index.htm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+}

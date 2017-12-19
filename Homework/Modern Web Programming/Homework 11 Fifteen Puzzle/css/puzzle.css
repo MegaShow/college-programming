@@ -1,0 +1,101 @@
+/* MegaShow */
+body {
+  text-align: center;
+  background-color: rgb(238, 238, 238);
+}
+
+.game {
+  width: 650px;
+  height: 360px;
+  margin: 50px auto;
+  padding: 0px;
+}
+
+.game-state {
+  width: 240px;
+  height: 360px;
+  margin: 0px auto;
+  padding: 0px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.game-state img {
+  width: 240px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+.game-info button {
+  margin-top: 20px;
+  width: 240px;
+  height: 40px;
+}
+
+.game-box {
+  width: 360px;
+  height: 360px;
+  font-size: 0px;
+  margin: 0px auto;
+  position: relative;
+  display: inline-block;
+}
+
+.game-box div {
+  width: 88px;
+  height: 88px;
+  border: 1px solid gray;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  background-image: url(../img/panda.jpg);
+  display: block;
+  z-index: 0;
+  transition: .1s ease-in .1s;
+}
+
+.game-box div:hover {
+  transform: scale(1.05, 1.05);
+  z-index: 1;
+}
+
+.game-blank {
+  width: 90px;
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
+
+.game-pic-left-0 { left: 0px; }
+.game-pic-left-1 { left: 90px; }
+.game-pic-left-2 { left: 180px; }
+.game-pic-left-3 { left: 270px; }
+
+.game-pic-top-0 { top: 0px; }
+.game-pic-top-1 { top: 90px; }
+.game-pic-top-2 { top: 180px; }
+.game-pic-top-3 { top: 270px; }
+
+.game-bg-0  { background-position:   0px     0px; }
+.game-bg-1  { background-position: -90px     0px; }
+.game-bg-2  { background-position: -180px    0px; }
+.game-bg-3  { background-position: -270px    0px; }
+.game-bg-4  { background-position:    0px  -90px; }
+.game-bg-5  { background-position:  -90px  -90px; }
+.game-bg-6  { background-position: -180px  -90px; }
+.game-bg-7  { background-position: -270px  -90px; }
+.game-bg-8  { background-position:    0px -180px; }
+.game-bg-9  { background-position:  -90px -180px; }
+.game-bg-10 { background-position: -180px -180px; }
+.game-bg-11 { background-position: -270px -180px; }
+.game-bg-12 { background-position:    0px -270px; }
+.game-bg-13 { background-position:  -90px -270px; }
+.game-bg-14 { background-position: -180px -270px; }
+.game-bg-15 { background-position: -270px -270px; }

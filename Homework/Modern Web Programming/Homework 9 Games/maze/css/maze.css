@@ -1,0 +1,147 @@
+/* MegaShow */
+body {
+  text-align: center;
+  min-width: 768px;
+}
+
+
+.game-box {
+  width: 400px;
+  height: 240px;
+  font-size: 0pt;
+  margin: 40px auto;
+}
+
+.game-box-in-game {
+  cursor: pointer;
+}
+
+.game-wall {
+  background-color: rgb(238, 238, 238);
+  display: inline-block;
+  padding: 0px;
+  font-size: 0pt;
+}
+
+.game-wall-red {
+  background-color: red;
+  display: inline-block;
+  padding: 0px;
+  font-size: 0pt;
+}
+
+.button-s {
+  font-size: 20pt;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(130, 254, 129);
+  transform: translate(0px, -80px);
+}
+
+.button-e {
+  font-size: 20pt;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(134, 132, 253);
+  transform: translate(360px, -120px);
+}
+
+.game-wall-1 {
+  margin: 0px;
+  width: 119px;
+  height: 39px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.game-wall-2 {
+  margin: 0px;
+  width: 160px;
+  height: 38px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.game-wall-3 {
+  margin: 0px;
+  width: 119px;
+  height: 39px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.game-wall-4 {
+  margin: 0px 0px 40px;
+  width: 118px;
+  height: 119px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.game-wall-5 {
+  margin: 40px 40px 0px;
+  width: 78px;
+  height: 119px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.game-wall-6 {
+  margin: 0px 0px 40px;
+  width: 118px;
+  height: 119px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.game-wall-7 {
+  margin: 0px;
+  width: 159px;
+  height: 38px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.game-wall-8 {
+  margin: 0px;
+  width: 80px;
+  height: 39px;
+  border-bottom: 1px solid;
+}
+
+.game-wall-9 {
+  margin: 0px;
+  width: 159px;
+  height: 38px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+
+.game-footer {
+  margin: 0px auto;
+  width: 500px;
+}
+
+.game-footer p {
+  text-align: left;
+}
+
+.game-wall-test {
+  background-color: rgb(238, 238, 238);
+  display: inline-block;
+  padding: 0px;
+  font-size: 0pt;
+  margin: 0px auto;
+  width: 80px;
+  height: 20px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}

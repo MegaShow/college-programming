@@ -1,0 +1,14 @@
+{
+  "name": "asynchronous",
+  "version": "1.0.0",
+  "description": "Homework 14 Asynchronous JavaScript",
+  "main": "app/index.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "MegaShow",
+  "license": "ISC"
+}

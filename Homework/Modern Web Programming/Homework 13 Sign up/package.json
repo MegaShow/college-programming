@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "homework 13 sign up",
+  "main": "signin.js",
+  "scripts": {
+    "dev": "node app/index.js"
+  },
+  "author": "MegaShow",
+  "license": "ISC"
+}

@@ -1,0 +1,43 @@
+/* Mega Show */
+
+a {
+  color: #A4A400;
+}
+
+blockquote {
+  background-color: #FFFFC8;
+  font-style: italic;
+}
+
+body {
+  background-attachment: fixed;
+  background-color: white;
+  background-image: url(https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg);
+  color: #404040;
+  font-size: 11pt;
+  font-family: Georgia, Garamond, sans-serif;
+}
+
+h1, h2 {
+  background-color: #F0F0F0;
+  color: #A4A400;
+  font-family: "century gothic", futura, verdana, sans-serif;
+  letter-spacing: 0.2em;
+  text-decoration-line: underline;
+}
+
+h1 {
+  font-size: 22pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18pt;
+  font-weight: normal;
+  text-align: left;
+}
+
+ul {
+  list-style-image: url(https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif);
+}

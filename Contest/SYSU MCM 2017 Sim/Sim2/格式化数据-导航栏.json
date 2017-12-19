@@ -1,0 +1,51 @@
+{
+  "http://www.sysu.edu.cn/2012/cn/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/zdgk02a/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/info/info01/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  },
+  "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": {
+    "http://www.sysu.edu.cn/2012/cn/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/zdgk/zdgk02/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/zdgk04/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jgsz/fsyy/index.htm": 1,
+    "http://www.sysu.edu.cn/2012/cn/jyjx/jyjx02/index.htm": 1
+  }
+}

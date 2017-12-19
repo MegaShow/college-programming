@@ -1,0 +1,56 @@
+/* MegaShow */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.system {
+  margin: 0px;
+  padding: 0px;
+}
+
+.desktop {
+  background-color: rgb(31, 140, 250);
+  bottom: 0px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  width: 1920px;
+}
+
+.desktop img {
+  height: 20px;
+  padding: 10px 15px;
+}
+
+.app {
+  border: 1px solid rgb(31, 140, 250);
+  left: 200px;
+  position: fixed;
+  top: 100px;
+  width: 345px;
+}
+
+.app-title {
+  background-color: rgb(31, 140, 250);
+  color: white;
+  height: 32px;
+  line-height: 32px;
+  width: 345px;
+}
+
+.app-icon {
+  display: inline;
+  height: 16px;
+  line-height: 32px;
+  margin: 0px 5px;
+  padding: 0px;
+  width: 16px;
+}
+
+.app-name {
+  display: inline;
+  font-size: 12pt;
+  font-weight: normal;
+}

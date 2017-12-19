@@ -1,0 +1,222 @@
+/* MegaShow */
+
+#button .blank {
+  z-index: -1;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+}
+
+#button:hover .blank {
+  width: 160px;
+  height: 270px;
+  transform: translate(-60px, -210px);
+}
+
+.apb {
+  bottom: 20%;
+  left: 50%;
+  position: fixed;
+  z-index: 1;
+}
+
+.icon {
+  background-color: #777FAA;
+  background-image: url(../images/atplus_white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 100px;
+  height: 30px;
+  transition: .3s ease .3s;
+  width: 30px;
+}
+
+#at-plus-container {
+  bottom: 20%;
+  left: 50%;
+  position: fixed;
+}
+
+#button #info-bar {
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  height: 0px;
+  opacity: 1;
+  position: relative;
+  transform: translateX(15px);
+  transition: opacity .3s ease .3s;
+  transition: .3s ease .3s;
+  width: 0px;
+}
+
+#button:hover #info-bar {
+  height: 130px;
+  width: 130px;
+  opacity: 1;
+  transform: translate(-40px, 120px);
+}
+
+#button .sum {
+  color: rgb(54, 218, 160);
+  font-size: 20pt;
+  width: 0px;
+  height: 0px;
+}
+
+#button:hover .sum {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  float: left;
+  transform: translate(50px, 50px);
+}
+
+#button .state {
+  text-align: center;
+  color: black;
+  font-size: 16pt;
+  width: 0px;
+  height: 0px;
+}
+
+#button:hover .state {
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  float: left;
+  transform: translate(-50px, 75px);
+}
+
+#button .msg {
+  text-align: center;
+  color: black;
+  font-size: 16pt;
+  width: 0px;
+  height: 0px;
+}
+
+#button:hover .msg {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  float: left;
+  transform: translate(-120px, 15px);
+}
+
+#button #control-ring-container {
+  opacity: 0;
+  transition: .3s ease .3s;
+}
+
+#button:hover #control-ring-container {
+  opacity: 1;
+}
+
+#button:hover #control-ring-container li {
+  height: 30px;
+  width: 30px;
+}
+
+#button:hover .icon {
+  background-image: url(../images/atplus_green.png);
+  background-color: rgba(48, 63, 159, 1);
+  background-size: 80%;
+  height: 50px;
+  width: 50px;
+}
+
+#button:hover .A {
+  transform: translate(-85px, 100px);
+}
+
+#button:hover .B {
+  transform: translate(-90px, 110px);
+}
+
+#button:hover .C {
+  transform: translate(-70px, 113px);
+}
+
+#button:hover .D {
+  transform: translate(-30px, 90px);
+}
+
+#button:hover .E {
+  transform: translate(10px, 40px);
+}
+
+#button .alpha {
+  float: left;
+  text-align: center;
+  margin-top: 4px;
+  margin-left: 7px;
+  color: white;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: .3s ease .3s;
+}
+
+#button:hover .alpha {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+#button .num {
+  background-color: red;
+  background-size: 100%;
+  border-radius: 100px;
+  color: white;
+  display: inline-block;
+  height: 0px;
+  font-size: 12px;
+  text-align: center;
+  transform: translate(20px, -28px);
+  transition: .3s ease .3s;
+  width: 0px;
+}
+
+#button:hover .num {
+  width: 16px;
+  height: 16px;
+}
+
+#control-ring-container li {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border-radius: 100px;
+  height: 0px;
+  list-style-type: none;
+  transform: translateX(-30px);
+  transition: .3s ease .3s;
+  width: 0px;
+}
+
+.color-blue { background-color: rgba(48, 63, 159, 1); }
+.color-gray { background-color: rgb(126, 126, 126); }
+
+#info-bar ul {
+  list-style-type: none;
+  margin-left: 10px;
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity .3s ease .3s;
+}
+
+#info-bar ul li {
+  left: 0%;
+  position: absolute;
+}
+
+#info-bar ul li {
+  left: 20%;
+}
+
+#button:hover #info-bar ul {
+  opacity: 1;
+}
+

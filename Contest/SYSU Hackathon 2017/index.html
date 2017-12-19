@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://pixijs.download/v4.5.0/pixi.min.js"></script>
+  <title>River</title>
+  <style type="text/css">
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body bgcolor="0x000000">
+  <audio autoplay="autoplay" loop="loop">
+    <source src="rc/bgm.mp3" type="audio/mpeg" />
+  </audio>
+  <script type="text/javascript">
+    var app = new PIXI.Application(1024, 576, { antialias: true });
+    //var bpp = new PIXI.Application(1024, 64, { antialias: true });
+    document.body.appendChild(app.view);
+  </script>
+  </script>
+  <script src="js/global.js"></script>
+  <script src="js/display.js"></script>
+  <script src="js/saybox.js"></script>
+  <script src="js/next.js"></script>
+  <script src="js/move.js"></script>
+  <script src="js/stage.js"></script>
+  <script src="js/game.js"></script>
+
+  <script type="text/javascript">
+    start();
+  </script>
+
+
+</body>
