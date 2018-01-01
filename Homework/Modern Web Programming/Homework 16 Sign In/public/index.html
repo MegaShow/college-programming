@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Log In</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="user" class="user">
+    <div id="title" class="title">用户登录</div>
+    <div class="input">
+      <div id="input-email" class="input-div">
+        <span>邮箱</span>
+        <input id="email" disabled="disabled">
+      </div>
+      <div id="input-username" class="input-div">
+        <span>用户名</span>
+        <input id="username">
+      </div>
+      <div id="input-password" class="input-div">
+        <span>密码</span>
+        <input id="password" type="password">
+      </div>
+      <div id="input-studentId" class="input-div">
+        <span>学号</span>
+        <input id="studentId" disabled="disabled">
+      </div>
+      <div id="input-phone" class="input-div">
+        <span>电话</span>
+        <input id="phone" disabled="disabled">
+      </div>
+    </div>
+    <div id="button" class="button">
+      <button id="signup">注册</button>
+      <button id="login-exit">登录</button>
+    </div>
+    <div id="state"></div>
+  </div>
+  <script src="js/sha512.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+body {
+  min-width: 420px;
+  font-family: 'consolas';
+  text-align: center;
+  background-color: rgb(238, 238, 238);
+}
+
+.user {
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+  width: 360px;
+  margin: 50px auto;
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 24pt;
+}
+
+.input {
+  margin: 20px 50px;
+}
+
+.input-div {
+  margin-top: 20px;
+}
+
+.input-div span {
+  width: 64px;
+  display: inline-block;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.button button {
+  background-color: rgb(215, 215, 215);
+  border-width: 0px;
+  font-size: 16pt;
+  height: 45px;
+  margin: 2px 0;
+  padding: 0px;
+  width: 80px;
+}
+
+.button button:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+#state {
+  margin-top: 20px;
+  height: 30px;
+}
+
+#input-email { display: none; }
+#input-studentId { display: none; }
+#input-phone { display: none; }
