@@ -1,22 +1,21 @@
-// 1031. Easy sort
+// 1009. Find Median
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
 
 int main() {
-  int t, n, val;
-  cin >> t;
-  while (t--) {
-    cin >> n;
+  int case_num;
+  cin >> case_num;
+  while (case_num--) {
+    int num, val;
     vector<int> v;
-    for (int i = 0; i < n; i++) {
+    cin >> num;
+    for (int i = 0; i < num; i++) {
       cin >> val;
       v.push_back(val);
     }
     sort(v.begin(), v.end());
-    for (auto &i: v) {
-      cout << i << endl;
-    }
+    cout << v[(v.size() - 1) / 2] << endl;
   }
 }
