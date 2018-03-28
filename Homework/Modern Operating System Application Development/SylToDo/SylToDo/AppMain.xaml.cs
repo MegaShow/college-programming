@@ -56,6 +56,7 @@ namespace SylToDo {
                         Type = 0;
                         break;
                 }
+                Menu.Header = args.InvokedItem.ToString();
                 TodoList.Current.list.ItemsSource = null;
                 TodoList.Current.list.ItemsSource = TodoMain.Current.ViewModel.Collection;
             }
