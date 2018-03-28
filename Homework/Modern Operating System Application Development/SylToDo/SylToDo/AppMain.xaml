@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="SylToDo.AppMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SylToDo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="Menu" ExpandedModeThresholdWidth="1280" IsSettingsVisible="true" IsTabStop="False" Header="所有" ItemInvoked="NavigationView_ItemInvoked">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="AllApps" Content="所有"/>
+            <NavigationViewItem Icon="CalendarDay" Content="今天"/>
+            <NavigationViewItem Icon="CalendarWeek" Content="最近7天"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Icon="Save" Content="已完成"/>
+        </NavigationView.MenuItems>
+        <Frame x:Name="contentFrame">
+        </Frame>
+    </NavigationView>
+</Page>

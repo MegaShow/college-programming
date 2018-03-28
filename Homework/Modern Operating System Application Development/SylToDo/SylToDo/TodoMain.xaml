@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="SylToDo.TodoMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SylToDo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="listColumn"/>
+            <ColumnDefinition x:Name="detailColumn"/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="listFrame" x:FieldModifier="Public" Grid.Column="0"/>
+        <Frame x:Name="detailFrame" x:FieldModifier="Public" Grid.Column="1"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="OnlyListState">
+                    <VisualState.Setters>
+                        <Setter Target="listFrame.Visibility" Value="Visible"/>
+                        <Setter Target="detailFrame.Visibility" Value="Collapsed"/>
+                        <Setter Target="listColumn.Width" Value="*"/>
+                        <Setter Target="detailColumn.Width" Value="0"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="OnlyDetailState">
+                    <VisualState.Setters>
+                        <Setter Target="listFrame.Visibility" Value="Collapsed"/>
+                        <Setter Target="detailFrame.Visibility" Value="Visible"/>
+                        <Setter Target="listColumn.Width" Value="0"/>
+                        <Setter Target="detailColumn.Width" Value="*"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="ListAndDetailState">
+                    <VisualState.Setters>
+                        <Setter Target="listFrame.Visibility" Value="Visible"/>
+                        <Setter Target="detailFrame.Visibility" Value="Visible"/>
+                        <Setter Target="listColumn.Width" Value="480"/>
+                        <Setter Target="detailColumn.Width" Value="*"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

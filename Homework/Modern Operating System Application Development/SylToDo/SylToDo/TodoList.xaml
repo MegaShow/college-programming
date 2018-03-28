@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="SylToDo.TodoList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SylToDo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Models="using:SylToDo.Models"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="30,30,30,30">
+        <Grid>
+            <Grid x:Name="blank"></Grid>
+            <ListView x:Name="list" x:FieldModifier="Public" ItemsSource="{x:Bind ViewModel.Collection, Mode=OneWay}" IsItemClickEnabled="True" SelectionChanged="ListSelect">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinHeight" Value="0" />
+                        <Setter Property="Padding" Value="30,0,30,0" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="Models:TodoItem">
+                        <Grid Visibility="{x:Bind visibility}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="42"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="CheckBox" IsChecked="{x:Bind isChecked, Mode=TwoWay}" Grid.Column="0" VerticalAlignment="Center" Height="32" Width="32"/>
+                            <Image x:Name="image" Source="{x:Bind image}" Visibility="{Binding ElementName=blank, Path=Visibility}" Grid.Column="1" Height="90" Width="90"/>
+                            <TextBlock Grid.Column="2" Text="{x:Bind title}" VerticalAlignment="Center"/>
+                            <Line x:Name="Line" Grid.Column="2" X1="0" Y1="50" X2="1" Y2="50" Stretch="Fill" Stroke="Black" StrokeThickness="2" Visibility="{Binding ElementName=CheckBox, Path=IsChecked}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="MinListState">
+                    <VisualState.Setters>
+                        <Setter Target="blank.(UIElement.Visibility)" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="FullListState">
+                    <VisualState.Setters>
+                        <Setter Target="blank.(UIElement.Visibility)" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </ScrollViewer>
+</Page>

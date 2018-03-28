@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="SylToDo.TodoDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SylToDo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock x:Name="blank" Visibility="Visible" Text="点击任务标题查看详情" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ScrollViewer x:Name="edit" Visibility="Collapsed" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="30,30,30,30">
+            <Grid Padding="30,30,30,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="image" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <AppBarButton Icon="Pictures" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Click="Button_Upload_Image"/>
+                <TextBox x:Name="title" Height="60" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Center" PlaceholderText="Input the To-Do title" AcceptsReturn="True" Header="Title"/>
+                <TextBox x:Name="description" MinHeight="60" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Text="" VerticalAlignment="Stretch" PlaceholderText="Input the To-Do description" AcceptsReturn="True" Header="Description" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                <DatePicker x:Name="dueDate" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Header="Due Date" MaxWidth="Infinity"/>
+                <Button x:Name="button_create_edit" Grid.Row="5" Grid.Column="0" Margin="0,0,10,0" Content="Create" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Create_Update"/>
+                <Button x:Name="button_cancel_delete" Grid.Row="5" Grid.Column="1" Margin="10,0,0,0" Content="Cancel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_Cancel_Delete"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
