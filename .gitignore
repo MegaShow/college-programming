@@ -1,3 +1,4 @@
 #binary file
 *.exe
 *.out
+*.class

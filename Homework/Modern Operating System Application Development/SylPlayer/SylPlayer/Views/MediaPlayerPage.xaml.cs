@@ -21,6 +21,7 @@ namespace SylPlayer.Views {
         private DisplayRequest _displayRequest = new DisplayRequest();
         private bool _isRequestActive = false;
         private bool _isPlay = false;
+        private bool _isStop = true;
 
         public MediaPlayerPage() {
             InitializeComponent();
@@ -86,6 +87,8 @@ namespace SylPlayer.Views {
                 mpe.Source = MediaSource.CreateFromStorageFile(file);
                 mpe.MediaPlayer.Play();
                 _isPlay = true;
+                _isStop = false;
+                mpe.TransportControls.IsStopEnabled = true;
                 if (mpe.MediaPlayer.PlaybackSession.NaturalVideoHeight == 0) {
                     grid.Visibility = Windows.UI.Xaml.Visibility.Visible;
                     StorageItemThumbnail thumbnail = await file.GetThumbnailAsync(ThumbnailMode.SingleItem);
@@ -104,15 +107,28 @@ namespace SylPlayer.Views {
         }
 
         private void SylMediaTransportControls_PlayPauseClick(object sender, EventArgs e) {
+            mpe.TransportControls.IsStopEnabled = true;
             if (grid.Visibility == Windows.UI.Xaml.Visibility.Visible) {
+                if (_isStop) {
+                    _isStop = false;
+                    pictureRotate.Begin();
+                }
                 if (_isPlay) {
                     _isPlay = false;
                     pictureRotate.Pause();
+
                 } else {
                     _isPlay = true;
                     pictureRotate.Resume();
                 }
             }
+        }
+
+        private void SylMediaTransportControls_StopClick(object sender, EventArgs e) {
+            _isPlay = false;
+            _isStop = true;
+            pictureRotate.Stop();
+            mpe.TransportControls.IsStopEnabled = false;
         }
     }
 }

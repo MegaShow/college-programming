@@ -33,7 +33,7 @@ namespace SylPlayer {
         }
 
         private ActivationService CreateActivationService() {
-            return new ActivationService(this, typeof(Views.MediaPlayerPage));
+            return new ActivationService(this, typeof(Views.BadMediaPlayerPage));
         }
     }
 }

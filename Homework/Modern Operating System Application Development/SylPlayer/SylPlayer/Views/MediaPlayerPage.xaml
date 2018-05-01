@@ -45,10 +45,11 @@
                             AreTransportControlsEnabled="True">
             <MediaPlayerElement.TransportControls>
                 <ctrl:SylMediaTransportControls IsCompact="False"
-                     IsSeekBarVisible="True"
-                     IsPlaybackRateButtonVisible="True"
-                     PlayPauseClick="SylMediaTransportControls_PlayPauseClick"
-                     FileOpenClick="SylMediaTransportControls_FileOpenClick"/>
+                                                IsSeekBarVisible="True"
+                                                IsStopButtonVisible="True"
+                                                PlayPauseClick="SylMediaTransportControls_PlayPauseClick"
+                                                StopClick="SylMediaTransportControls_StopClick"
+                                                FileOpenClick="SylMediaTransportControls_FileOpenClick"/>
             </MediaPlayerElement.TransportControls>
         </MediaPlayerElement>
     </Grid>
