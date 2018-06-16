@@ -27,5 +27,5 @@ section .data
 msg:
     db "Hello World!", 0x0a, 0x0d ; len 14
     db "MegaShow", 0x0a, 0x0d ; len 10
-    db "16340040", 0x0a, 0x0d ; len 10
+    db "12345678", 0x0a, 0x0d ; len 10
     db "$"

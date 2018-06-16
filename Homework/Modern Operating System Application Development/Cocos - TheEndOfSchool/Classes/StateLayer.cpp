@@ -1,5 +1,6 @@
 #include "StateLayer.h"
 #include "Player.h"
+#include "Monster.h"
 
 Layer * StateLayer::createLayer() {
     return StateLayer::create();
@@ -35,6 +36,14 @@ bool StateLayer::init() {
     timer = Label::createWithTTF("150", "fonts/arial.ttf", 36);
     timer->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - 80));
     this->addChild(timer, 0);
+
+	int val = UserDefault::getInstance()->getIntegerForKey("Monster");
+	std::ostringstream ss;
+	ss << val;
+	killNumber = Label::createWithTTF(ss.str(), "fonts/arial.ttf", 36);
+	killNumber->setPosition(Vec2(visibleSize.width - killNumber->getContentSize().width,
+		visibleSize.height - killNumber->getContentSize().height));
+	this->addChild(killNumber, 0);
 
     auto menuLabelW = Label::createWithTTF("W", "fonts/arial.ttf", 36);
     auto menuLabelA = Label::createWithTTF("A", "fonts/arial.ttf", 36);
@@ -72,6 +81,9 @@ void StateLayer::updateHPBar(float dt) {
     } else if (hpBar->getPercentage() > Player::getInstance()->GetHP()) {
         hpBar->setPercentage(hpBar->getPercentage() - 1);
     }
+	if (hpBar->getPercentage() == 0) {
+		this->unscheduleAllCallbacks();
+	}
 }
 
 void StateLayer::updateTimer(float dt) {
@@ -81,6 +93,10 @@ void StateLayer::updateTimer(float dt) {
         ss << time;
         timer->setString(ss.str());
     }
+	int val = UserDefault::getInstance()->getIntegerForKey("Monster");
+	std::ostringstream ss;
+	ss << val;
+	killNumber->setString(ss.str());
 }
 
 void StateLayer::PlayerMove(Ref * object, int direction) {
@@ -88,11 +104,11 @@ void StateLayer::PlayerMove(Ref * object, int direction) {
 }
 
 void StateLayer::PlayerDead(Ref * object) {
-    Player::getInstance()->Dead();
+    // Do nothing
+    // Player::getInstance()->Dead();
 }
 
 void StateLayer::PlayerAttack(Ref * object) {
-    Player::getInstance()->Attack();
+	auto player = Player::getInstance();
+    player->Attack();
 }
-
-

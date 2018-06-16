@@ -19,6 +19,7 @@ private:
 
     ProgressTimer * hpBar;
     Label* timer;
+	Label* killNumber;
     int time;
 };
 

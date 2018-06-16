@@ -18,6 +18,9 @@ public:
 
     void ResetSpriteFrame();
     double GetHP();
+	double Hit(double x);
+	double Cure(double x);
+	void CheckAttack();
 
 private:
     Player(Animation* attack, Animation* dead, Animation* run);
@@ -30,6 +33,7 @@ private:
     Animate* run;
 
     double hp;
+	bool isDead;
 };
 
 #endif

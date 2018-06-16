@@ -1,7 +1,7 @@
         org     100h
 
         section .data
-src:    db      "Chen Xiujia", 0ah, 0dh, "16340040", 0ah, 0dh, "$", 0
+src:    db      "MegaShow", 0ah, 0dh, "12345678", 0ah, 0dh, "$", 0
 dest:   times   100     db      0
 
         section .text
