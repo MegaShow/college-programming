@@ -87,6 +87,7 @@ bool LoginRegisterScene::init()
 
 void LoginRegisterScene::loginButtonCallback(cocos2d::Ref * pSender)
 {
+    messageBox->setString("");
     APIService::Login(usernameInput->getString(), passwordInput->getString(), [&](HttpClient* sender, HttpResponse* res) -> void
     {
         if (!res || !res->isSucceed())
@@ -100,13 +101,14 @@ void LoginRegisterScene::loginButtonCallback(cocos2d::Ref * pSender)
         }
         else
         {
-            messageBox->setString("Login OK\n");
+            messageBox->setString(string("Login OK\n") + d["msg"].GetString());
         }
     });
 }
 
 void LoginRegisterScene::registerButtonCallback(Ref * pSender)
 {
+    messageBox->setString("");
     APIService::Register(usernameInput->getString(), passwordInput->getString(), [&](HttpClient* sender, HttpResponse* res) -> void
     {
         if (!res || !res->isSucceed())
@@ -120,7 +122,7 @@ void LoginRegisterScene::registerButtonCallback(Ref * pSender)
         }
         else
         {
-            messageBox->setString("Register OK");
+            messageBox->setString(string("Register OK\n") + d["msg"].GetString());
         }
     });
 }

@@ -39,9 +39,10 @@ void APIService::UpdateDeck(const string & deck, const ccHttpRequestCallback & c
     arr.Parse(deck.c_str());
     d.SetObject();
     d.AddMember("deck", arr, d.GetAllocator());
-    if (d.HasParseError())
+    if (arr.HasParseError())
     {
-        // throw d.GetParseError();
+        // throw arr.GetParseError();
+        return;
     }
     Singleton<Net>::getInstance()->Put(baseUrl + "/users", d, callback);
 }

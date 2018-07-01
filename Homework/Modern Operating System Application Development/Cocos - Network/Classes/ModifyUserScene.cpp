@@ -64,6 +64,7 @@ bool ModifyUserScene::init()
 
 void ModifyUserScene::putDeckButtonCallback(Ref * pSender)
 {
+    messageBox->setString("");
     APIService::UpdateDeck(deckInput->getString(), [&](HttpClient* sender, HttpResponse* res) -> void
     {
         if (!res || !res->isSucceed())
@@ -77,7 +78,7 @@ void ModifyUserScene::putDeckButtonCallback(Ref * pSender)
         }
         else
         {
-            messageBox->setString("PUT OK\n");
+            messageBox->setString(string("PUT OK\n") + d["msg"].GetString());
         }
     });
 }

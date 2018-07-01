@@ -67,6 +67,7 @@ bool UsersInfoScene::init()
 
 void UsersInfoScene::getUserButtonCallback(Ref * pSender)
 {
+    messageBox->setString("");
     APIService::GetUsersInfo(limitInput->getString(), [&](HttpClient* sender, HttpResponse* res) -> void
     {
         if (!res || !res->isSucceed())
