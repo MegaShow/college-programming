@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ExperimentTwo</string>
+    <string name="title">中山大学智慧健康服务平台</string>
+    <string name="searchHint">请输入搜索内容</string>
+    <string name="searchButton">搜索</string>
+    <string name="radioButtonInfo">资讯</string>
+    <string name="radioButtonImage">图片</string>
+    <string name="radioButtonVideo">视频</string>
+    <string name="radioButtonFAQ">问答</string>
+    <string name="imageViewContentDescription">SYSU LOGO</string>
+    <string name="buttonText">搜索</string>
+    <string name="week45">第四、五周任务</string>
+    <string name="week6">第六周任务</string>
+    <string name="back">Back</string>
+    <string name="star">Star</string>
+    <string name="collect">Collect</string>
+    <string name="more">更多资料</string>
+    <string name="foodDetailHint">富含 %1$s</string>
+    <string name="appwidget_text">当前没有任何消息</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+</resources>
