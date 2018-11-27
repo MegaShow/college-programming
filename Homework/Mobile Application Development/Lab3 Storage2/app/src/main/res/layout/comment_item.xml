@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.lang.Integer" />
+
+        <import type="com.icytown.course.experimentthree.storage2.ui.comment.ListAdapter" />
+
+        <variable
+            name="model"
+            type="com.icytown.course.experimentthree.storage2.data.model.Item" />
+
+        <variable
+            name="presenter"
+            type="com.icytown.course.experimentthree.storage2.ui.comment.Presenter" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> presenter.onItemClick(context, model.comment)}"
+        android:onLongClick="@{() -> presenter.onItemLongClick(context, model.comment)}">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:imageBitmap="@{model.user.avatar}" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text="@{model.comment.username}"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/commentLike"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:text="@{ListAdapter.covertDateToString(model.comment.date)}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toStartOf="@+id/commentLike"
+            app:layout_constraintStart_toEndOf="@+id/avatar" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{model.comment.text}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/commentLike"
+            android:focusable="false"
+            android:onClick="@{() -> presenter.onClickLike(context, model)}"
+            android:src="@{model.isLike ? @drawable/red : @drawable/white}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name"
+            app:layout_constraintBottom_toBottomOf="@+id/date"/>
+
+        <TextView
+            android:id="@+id/commentLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@{Integer.toString(model.comment.like)}"
+            app:layout_constraintBottom_toBottomOf="@+id/likeIcon"
+            app:layout_constraintEnd_toStartOf="@+id/likeIcon"
+            app:layout_constraintTop_toTopOf="@+id/likeIcon" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

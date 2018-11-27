@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.activity.menu.MenuHandler" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMenuBackground">
+
+        <ImageView
+            android:id="@+id/menu_img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_color"
+            android:contentDescription="@string/menu_des_logo"
+            android:paddingBottom="40sp"
+            android:src="@drawable/ic_logo" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/menu_btn_search"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60sp"
+            android:backgroundTint="#fff"
+            android:onClick="@{handler::onClickSearch}"
+            android:paddingHorizontal="20sp"
+            android:paddingVertical="15sp"
+            android:text="@string/menu_hint_search"
+            android:textAlignment="textStart"
+            android:textColor="#666"
+            android:textSize="14sp"
+            app:icon="@drawable/ic_search"
+            app:iconPadding="20sp"
+            app:iconSize="20dp"
+            app:iconTint="#333"
+            app:layout_constraintBottom_toBottomOf="@id/menu_img_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_img_logo"
+            app:rippleColor="#ddd" />
+
+        <ImageView
+            android:id="@+id/menu_hero"
+            style="@style/menuButton"
+            android:contentDescription="@string/menu_herolist"
+            android:onClick="@{handler::onClickList}"
+            android:src="@drawable/ic_artifact"
+            app:layout_constraintBottom_toTopOf="@id/menu_text_hero"
+            app:layout_constraintEnd_toStartOf="@id/menu_weapon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_btn_search"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/menu_weapon"
+            style="@style/menuButton"
+            android:contentDescription="@string/menu_weapon"
+            android:onClick="@{handler::onClickList}"
+            android:src="@drawable/ic_weapons"
+            app:layout_constraintBottom_toTopOf="@id/menu_text_weapon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/menu_hero"
+            app:layout_constraintTop_toBottomOf="@+id/menu_btn_search"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/menu_skill"
+            style="@style/menuButton"
+            android:contentDescription="@string/menu_text_skill"
+            android:onClick="@{handler::onClickList}"
+            android:src="@drawable/ic_skill"
+            app:layout_constraintBottom_toTopOf="@id/menu_text_skill"
+            app:layout_constraintEnd_toStartOf="@+id/menu_collection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_hero"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/menu_collection"
+            style="@style/menuButton"
+            android:contentDescription="@string/menu_text_collection"
+            android:onClick="@{handler::onClickCollection}"
+            android:src="@drawable/ic_collection"
+            app:layout_constraintBottom_toTopOf="@id/menu_text_collection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/menu_skill"
+            app:layout_constraintTop_toBottomOf="@id/menu_weapon"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/menu_text_hero"
+            style="@style/menuText"
+            android:text="@string/menu_text_hero"
+            app:layout_constraintBottom_toTopOf="@id/menu_skill"
+            app:layout_constraintEnd_toEndOf="@+id/menu_hero"
+            app:layout_constraintStart_toStartOf="@+id/menu_hero"
+            app:layout_constraintTop_toBottomOf="@+id/menu_hero" />
+
+        <TextView
+            android:id="@+id/menu_text_weapon"
+            style="@style/menuText"
+            android:text="@string/menu_text_weapon"
+            app:layout_constraintBottom_toTopOf="@id/menu_collection"
+            app:layout_constraintEnd_toEndOf="@+id/menu_weapon"
+            app:layout_constraintStart_toStartOf="@+id/menu_weapon"
+            app:layout_constraintTop_toBottomOf="@+id/menu_weapon" />
+
+        <TextView
+            android:id="@+id/menu_text_skill"
+            style="@style/menuText"
+            android:text="@string/menu_text_skill"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_skill"
+            app:layout_constraintStart_toStartOf="@+id/menu_skill"
+            app:layout_constraintTop_toBottomOf="@+id/menu_skill" />
+
+        <TextView
+            android:id="@+id/menu_text_collection"
+            style="@style/menuText"
+            android:text="@string/menu_text_collection"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_collection"
+            app:layout_constraintStart_toStartOf="@+id/menu_collection"
+            app:layout_constraintTop_toBottomOf="@+id/menu_collection" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

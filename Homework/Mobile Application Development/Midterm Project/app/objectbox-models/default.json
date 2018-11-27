@@ -1,0 +1,291 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3800220202485793269",
+      "lastPropertyId": "10:106269863733585419",
+      "name": "HeroListItem",
+      "properties": [
+        {
+          "id": "1:6441783332759273535",
+          "name": "_id"
+        },
+        {
+          "id": "2:8265205271501895452",
+          "indexId": "2:2886710843913790793",
+          "name": "id"
+        },
+        {
+          "id": "3:6075866288215521795",
+          "name": "name"
+        },
+        {
+          "id": "5:2443264755607740680",
+          "name": "freeHero"
+        },
+        {
+          "id": "6:1083728859761518443",
+          "name": "newHero"
+        },
+        {
+          "id": "7:7493642142124202667",
+          "name": "recommendHero"
+        },
+        {
+          "id": "9:5667753577792963106",
+          "name": "types"
+        },
+        {
+          "id": "10:106269863733585419",
+          "name": "defaultSkin"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2762576161621336110",
+      "lastPropertyId": "10:3811250390521870386",
+      "name": "ItemItem",
+      "properties": [
+        {
+          "id": "1:6553890603577794283",
+          "name": "_id"
+        },
+        {
+          "id": "2:5103682045078147476",
+          "indexId": "3:790987149823898672",
+          "name": "id"
+        },
+        {
+          "id": "3:1755709829540285198",
+          "name": "name"
+        },
+        {
+          "id": "4:9189410686055546854",
+          "name": "special"
+        },
+        {
+          "id": "5:2004358782215674533",
+          "name": "type"
+        },
+        {
+          "id": "6:8960165015641750335",
+          "name": "price"
+        },
+        {
+          "id": "7:6905616472903465961",
+          "name": "totalPrice"
+        },
+        {
+          "id": "8:3275749065536272989",
+          "name": "level"
+        },
+        {
+          "id": "9:3535598198086586535",
+          "name": "effect"
+        },
+        {
+          "id": "10:3811250390521870386",
+          "name": "passiveEffect"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:714634791213351761",
+      "lastPropertyId": "5:6785065998850553147",
+      "name": "SummonerItem",
+      "properties": [
+        {
+          "id": "1:3478887593891212727",
+          "name": "_id"
+        },
+        {
+          "id": "2:8046824508086559920",
+          "indexId": "4:604840800695415549",
+          "name": "id"
+        },
+        {
+          "id": "3:8120660931461695036",
+          "name": "name"
+        },
+        {
+          "id": "4:4343611623167977374",
+          "name": "rank"
+        },
+        {
+          "id": "5:6785065998850553147",
+          "name": "description"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:3670298583462903771",
+      "lastPropertyId": "22:1449428372115980829",
+      "name": "HeroDetailItem",
+      "properties": [
+        {
+          "id": "1:5709080969632330684",
+          "name": "_id"
+        },
+        {
+          "id": "2:7920094534604508288",
+          "indexId": "5:4504025352847878477",
+          "name": "id"
+        },
+        {
+          "id": "4:1933309713718042475",
+          "name": "skills"
+        },
+        {
+          "id": "5:3721632289409630056",
+          "name": "suggestSummoners"
+        },
+        {
+          "id": "6:5974839061250373069",
+          "name": "attrViability"
+        },
+        {
+          "id": "7:3682176018278483431",
+          "name": "attrAttack"
+        },
+        {
+          "id": "8:8015741024954322945",
+          "name": "attrSkill"
+        },
+        {
+          "id": "9:2455748598626248061",
+          "name": "attrDifficulty"
+        },
+        {
+          "id": "10:3148044871724393454",
+          "name": "skins"
+        },
+        {
+          "id": "11:7282836083369554794",
+          "name": "suggestFirstSkill"
+        },
+        {
+          "id": "12:5408989324682203348",
+          "name": "suggestSecondSkill"
+        },
+        {
+          "id": "13:8642808444437892465",
+          "name": "relations"
+        },
+        {
+          "id": "14:6068666415185231735",
+          "name": "suggestFirstItems"
+        },
+        {
+          "id": "15:353591638505311530",
+          "name": "suggestFirstItemsDescription"
+        },
+        {
+          "id": "16:1609926016758599589",
+          "name": "suggestSecondItems"
+        },
+        {
+          "id": "17:3138690489389534515",
+          "name": "suggestSecondItemsDescription"
+        },
+        {
+          "id": "18:1170194035549561730",
+          "name": "suggestInscriptions"
+        },
+        {
+          "id": "19:7798206696284941352",
+          "name": "suggestInscriptionsDescription"
+        },
+        {
+          "id": "20:8954479209719211864",
+          "name": "name"
+        },
+        {
+          "id": "21:4460427410894127406",
+          "name": "story"
+        },
+        {
+          "id": "22:1449428372115980829",
+          "name": "type"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:3871077520657944748",
+      "lastPropertyId": "4:3766742070432895964",
+      "name": "InscriptionItem",
+      "properties": [
+        {
+          "id": "1:2456538812640768763",
+          "name": "_id"
+        },
+        {
+          "id": "2:8023048841698164025",
+          "indexId": "6:1159764417886493340",
+          "name": "id"
+        },
+        {
+          "id": "3:7808175641989828805",
+          "name": "name"
+        },
+        {
+          "id": "4:3766742070432895964",
+          "name": "description"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:345346820721281052",
+      "lastPropertyId": "6:2353664186495543871",
+      "name": "CollectionItem",
+      "properties": [
+        {
+          "id": "1:8939207950915160972",
+          "name": "_id"
+        },
+        {
+          "id": "2:8168933369668838067",
+          "indexId": "7:2245335156988561133",
+          "name": "id"
+        },
+        {
+          "id": "3:659719655543571659",
+          "name": "type"
+        },
+        {
+          "id": "4:6905199889207026397",
+          "name": "remark"
+        },
+        {
+          "id": "6:2353664186495543871",
+          "name": "time"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:345346820721281052",
+  "lastIndexId": "7:2245335156988561133",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    8675683271437355974
+  ],
+  "retiredPropertyUids": [
+    5698070670527553680,
+    3860272285433148236,
+    2338774828744132608,
+    5638747082354539989
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="match_parent">-1dp</dimen>
+    <dimen name="wrap_content">-2dp</dimen>
+</resources>

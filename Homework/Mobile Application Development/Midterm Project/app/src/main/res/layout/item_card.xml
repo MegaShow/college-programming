@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.fragment.card.CardHandler" />
+    </data>
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_card_attr_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:scaleType="center"
+                android:visibility="gone"
+                android:src="@drawable/ic_icon_pic"
+                tools:src="@drawable/ic_icon_pic"
+                tools:visibility="visible" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_card_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:foreground="@drawable/item_border_other"
+                    android:padding="1dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@mipmap/example_avatar" />
+
+                <TextView
+                    android:id="@+id/item_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="25dp"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/item_card_icon"
+                    app:layout_constraintTop_toTopOf="@id/item_card_icon"
+                    tools:text="暗影战斧" />
+
+                <LinearLayout
+                    android:id="@+id/item_card_layout_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingEnd="30dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="@id/item_card_name"
+                    app:layout_constraintTop_toBottomOf="@id/item_card_name">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_money"
+                        android:layout_marginTop="5dp" />
+
+                    <TextView
+                        android:id="@+id/item_card_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#cf9833"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="1254" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_money_total"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:id="@+id/item_card_price_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#cf9833"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="1254" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_card_lv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#cf9833"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="等级：3"
+                    app:layout_constraintLeft_toLeftOf="@id/item_card_name"
+                    app:layout_constraintTop_toBottomOf="@id/item_card_name"/>
+
+                <TextView
+                    android:id="@+id/item_card_attr_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingExtra="3dp"
+                    android:maxWidth="250dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="#37a2f4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_card_icon"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="+40物理攻击\n+300最大生命300最大生命300最大生命300最大生命300最大生命"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/item_card_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_card_attr_text"
+                    tools:text="唯一被动-强击：使用技能后，2秒内提升自身8%移动速度，并使得下次普通攻击造成额外1.0*物理攻击的物理伤害，冷却时间：2秒" />
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/item_card_btn_ok"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="@{handler::onClickOk}"
+                    android:text="@string/btn_ok"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_card_detail" />
+
+                <ImageView
+                    android:id="@+id/item_card_btn_love"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:onClick="@{handler::onClickLike}"
+                    android:src="@drawable/ic_love"
+                    app:layout_constraintBottom_toBottomOf="@id/item_card_btn_ok"
+                    app:layout_constraintRight_toLeftOf="@id/item_card_btn_share"
+                    app:layout_constraintTop_toTopOf="@id/item_card_btn_ok" />
+
+                <ImageView
+                    android:id="@+id/item_card_btn_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:onClick="@{handler::onClickShare}"
+                    android:src="@drawable/ic_share"
+                    app:layout_constraintBottom_toBottomOf="@id/item_card_btn_ok"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item_card_btn_ok" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
+
+</layout>

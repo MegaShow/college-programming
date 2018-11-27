@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.activity.list.ListHeroHandler" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_background"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/sheet_slide_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/sheet_title_syn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/sort_title_1"
+            android:textColor="#666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sheet_slide_icon" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/sheet_btn_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{handler::onClickSort}"
+            android:text="@string/sort_all"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@id/sheet_btn_new"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sheet_title_syn" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/sheet_btn_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onClickSort}"
+            android:text="@string/sort_new"
+            app:backgroundTint="@color/colorBtnGray"
+            app:layout_constraintEnd_toStartOf="@id/sheet_btn_week"
+            app:layout_constraintStart_toEndOf="@id/sheet_btn_all"
+            app:layout_constraintTop_toTopOf="@id/sheet_btn_all"
+            app:layout_constraintBottom_toBottomOf="@id/sheet_btn_all"/>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/sheet_btn_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onClickSort}"
+            android:text="@string/sort_week"
+            android:textColor="#eee"
+            app:backgroundTint="@color/colorBtnGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sheet_btn_new"
+            app:layout_constraintTop_toTopOf="@id/sheet_btn_all"
+            app:layout_constraintBottom_toBottomOf="@id/sheet_btn_all"/>
+
+        <TextView
+            android:id="@+id/sheet_title_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/sort_pos"
+            android:textColor="#666"
+            app:layout_constraintStart_toStartOf="@id/sheet_title_syn"
+            app:layout_constraintTop_toBottomOf="@id/sheet_btn_all" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_1"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_01"
+            app:layout_constraintEnd_toStartOf="@id/sheet_sort_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sheet_title_sort"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_2"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_02"
+            app:layout_constraintBottom_toBottomOf="@id/sheet_sort_1"
+            app:layout_constraintLeft_toRightOf="@id/sheet_sort_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sheet_sort_1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_3"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_03"
+            app:layout_constraintStart_toStartOf="@+id/sheet_sort_1"
+            app:layout_constraintTop_toBottomOf="@id/sheet_sort_1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_4"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_04"
+            app:layout_constraintBottom_toBottomOf="@id/sheet_sort_3"
+            app:layout_constraintLeft_toRightOf="@id/sheet_sort_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sheet_sort_3"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_5"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_05"
+            app:layout_constraintStart_toStartOf="@+id/sheet_sort_1"
+            app:layout_constraintTop_toBottomOf="@id/sheet_sort_3"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/sheet_sort_6"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:onClick="@{handler::onClickSort}"
+            android:scaleType="centerInside"
+            android:src="@mipmap/hero_sort_06"
+            app:layout_constraintBottom_toBottomOf="@id/sheet_sort_5"
+            app:layout_constraintLeft_toRightOf="@id/sheet_sort_5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sheet_sort_5"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Storage 1</string>
+    <string name="newPasswordHint">New Password</string>
+    <string name="confirmPasswordHint">Confirm Password</string>
+    <string name="buttonOkText">OK</string>
+    <string name="buttonClearText">CLEAR</string>
+    <string name="passwordText">Password</string>
+    <string name="buttonSaveText">SAVE</string>
+    <string name="buttonLoadText">LOAD</string>
+</resources>

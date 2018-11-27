@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.activity.list.ListItemHandler" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_background"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/sheet_item_slide_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/sheet_item_title_syn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/sort_mode"
+            android:textColor="#666"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sheet_item_slide_icon" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/sheet_item_btn_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onClickClass}"
+            android:text="@string/mode_normal"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@id/sheet_item_btn_special"
+            app:layout_constraintStart_toStartOf="@+id/sheet_item_title_syn"
+            app:layout_constraintTop_toBottomOf="@id/sheet_item_title_syn" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/sheet_item_btn_special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onClickClass}"
+            android:text="@string/mode_special"
+            app:backgroundTint="@color/colorBtnGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sheet_item_btn_normal"
+            app:layout_constraintTop_toBottomOf="@id/sheet_item_title_syn" />
+
+        <TextView
+            android:id="@+id/sheet_item_title_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/menu_item_filter"
+            android:textColor="#666"
+            app:layout_constraintStart_toStartOf="@id/sheet_item_title_syn"
+            app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_normal" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/sheet_layout_normal"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@id/sheet_item_title_sort"
+            app:layout_constraintTop_toBottomOf="@id/sheet_item_title_sort">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/sort_all"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toStartOf="@id/sheet_item_btn_attack"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_attack"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sheet_item_btn_all" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_magic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_magin"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toStartOf="@id/sheet_item_btn_attack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_all" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_defense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_defense"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sheet_item_btn_all"
+                app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_all" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_move"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toStartOf="@id/sheet_item_btn_attack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_magic" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_jungle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_jungle"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sheet_item_btn_all"
+                app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_magic" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_item_btn_auxiliary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSort}"
+                android:text="@string/item_auxiliary"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toStartOf="@id/sheet_item_btn_attack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sheet_item_btn_move" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/sheet_layout_special"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/sheet_item_title_sort"
+            app:layout_constraintTop_toBottomOf="@id/sheet_item_title_sort">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_sp_item_btn_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSortSp}"
+                android:text="@string/sort_all"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toStartOf="@id/sheet_sp_item_btn_equip"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_sp_item_btn_equip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSortSp}"
+                android:text="@string/item_equip"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sheet_sp_item_btn_all" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_sp_item_btn_prop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSortSp}"
+                android:text="@string/item_prop"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toStartOf="@id/sheet_sp_item_btn_equip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sheet_sp_item_btn_all" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/sheet_sp_item_btn_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handler::onClickSortSp}"
+                android:text="@string/item_skill"
+                app:backgroundTint="@color/colorBtnGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sheet_sp_item_btn_all"
+                app:layout_constraintTop_toBottomOf="@id/sheet_sp_item_btn_all" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

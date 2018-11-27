@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Storage 2</string>
+    <string name="editNameHint">Username</string>
+    <string name="editPasswordHint">Password</string>
+    <string name="editNewPasswordHint">New Password</string>
+    <string name="editConfirmPasswordHint">Confirm Password</string>
+    <string name="imageViewContent">AddAvatar</string>
+    <string name="buttonClearText">CLEAR</string>
+    <string name="buttonOkText">OK</string>
+    <string name="radioLoginText">Login</string>
+    <string name="radioRegisterText">Register</string>
+    <string name="editCommentHint">Comment</string>
+    <string name="buttonSendText">SEND</string>
+    <string name="avatar">avatar</string>
+    <string name="commentLike">commentLike</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:foreground="@drawable/item_border_other"
+                android:id="@+id/item_avatar"
+                android:layout_margin="10dp"
+                android:padding="1dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:src="@mipmap/example_avatar" />
+
+            <ImageView
+                android:id="@+id/item_badge_free"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_badge_free"
+                app:layout_constraintTop_toTopOf="@id/item_avatar"
+                app:layout_constraintStart_toStartOf="@id/item_avatar"/>
+
+            <ImageView
+                android:id="@+id/item_badge_new"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:src="@drawable/ic_badge_new"
+                app:layout_constraintTop_toTopOf="@id/item_avatar"
+                app:layout_constraintStart_toStartOf="@id/item_avatar"/>
+
+            <TextView
+                android:id="@+id/item_hero_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="秀秀怪"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/item_avatar"
+                app:layout_constraintLeft_toLeftOf="@id/item_avatar"
+                app:layout_constraintRight_toRightOf="@id/item_avatar"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+</layout>

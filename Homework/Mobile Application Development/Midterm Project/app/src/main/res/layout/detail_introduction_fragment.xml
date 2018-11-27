@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.fragment.detail.IntroductionHandler" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/hero_attribute_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/detail_title_border" />
+
+                <TextView
+                    android:id="@+id/hero_attribute_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="英雄属性"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTip"
+                app:layout_constraintTop_toBottomOf="@+id/hero_attribute_title" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/hero_attribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hero_attribute_title">
+
+                <TextView
+                    android:id="@+id/attribute_survive_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="生存能力"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_survive"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_survive_text"
+                    app:layout_constraintStart_toEndOf="@+id/attribute_survive_text"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_survive_text"
+                    app:rcBackgroundColor="@color/colorTip"
+                    app:rcBackgroundPadding="3dp"
+                    app:rcProgressColor="#208fe8"
+                    app:rcRadius="5dp"
+                    app:rcReverse="false" />
+
+                <TextView
+                    android:id="@+id/number_survive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#208fe8"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_survive_text"
+                    app:layout_constraintStart_toEndOf="@+id/progress_survive"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_survive_text" />
+
+
+                <TextView
+                    android:id="@+id/attribute_attack_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="攻击伤害"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/attribute_survive_text" />
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_attack"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_attack_text"
+                    app:layout_constraintStart_toEndOf="@+id/attribute_attack_text"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_attack_text"
+                    app:rcBackgroundColor="@color/colorTip"
+                    android:layout_marginStart="10dp"
+                    app:rcBackgroundPadding="3dp"
+                    app:rcProgressColor="#e6c965"
+                    app:rcRadius="5dp"
+                    app:rcReverse="false" />
+
+
+                <TextView
+                    android:id="@+id/number_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#e6c965"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_attack_text"
+                    app:layout_constraintStart_toEndOf="@+id/progress_attack"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_attack_text" />
+
+                <TextView
+                    android:id="@+id/attribute_skill_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="技能效果"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/attribute_attack_text"/>
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_skill"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_skill_text"
+                    app:layout_constraintStart_toEndOf="@id/attribute_skill_text"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_skill_text"
+                    app:rcBackgroundColor="@color/colorTip"
+                    app:rcBackgroundPadding="3dp"
+                    app:rcProgressColor="#5bd374"
+                    app:rcRadius="5dp"
+                    app:rcReverse="false" />
+
+                <TextView
+                    android:id="@+id/number_skill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#5bd374"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_skill_text"
+                    app:layout_constraintStart_toEndOf="@+id/progress_skill"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_skill_text" />
+
+
+                <TextView
+                    android:id="@+id/attribute_difficulty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="上手难度"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/attribute_skill_text" />
+
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:id="@+id/progress_difficulty"
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_difficulty_text"
+                    app:layout_constraintStart_toEndOf="@id/attribute_difficulty_text"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_difficulty_text"
+                    app:rcBackgroundColor="@color/colorTip"
+                    app:rcBackgroundPadding="3dp"
+                    app:rcProgressColor="#e74933"
+                    app:rcRadius="5dp"
+                    app:rcReverse="false" />
+
+                <TextView
+                    android:id="@+id/number_difficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#e74933"
+                    app:layout_constraintBottom_toBottomOf="@+id/attribute_difficulty_text"
+                    app:layout_constraintStart_toEndOf="@+id/progress_difficulty"
+                    app:layout_constraintTop_toTopOf="@+id/attribute_difficulty_text" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/hero_relation_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hero_attribute">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/detail_title_border" />
+
+                <TextView
+                    android:id="@+id/hero_relation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="英雄关系"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTip"
+                app:layout_constraintTop_toBottomOf="@+id/hero_relation_title" />
+
+            <LinearLayout
+                android:id="@+id/hero_relation_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/hero_relation_title">
+
+                <ImageView
+                    android:id="@+id/hero_relation_partner"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_relation_partner_selected" />
+
+                <ImageView
+                    android:id="@+id/hero_relation_suppress"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_relation_supress" />
+
+                <ImageView
+                    android:id="@+id/hero_relation_suppressed"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_relation_supressed" />
+
+            </LinearLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/hero_relation_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/hero_relation_icon">
+
+                <TextView
+                    android:id="@+id/hero_relation_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/relation_partner"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/hero_relation_hero1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/hero_relation_type"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:foreground="@drawable/item_select_border"
+                    android:padding="2dp"
+                    android:src="@mipmap/example_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/hero_relation_hero2"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hero_relation_type" />
+
+                <ImageView
+                    android:id="@+id/hero_relation_hero2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/hero_relation_type"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_toEndOf="@id/hero_relation_hero1"
+                    android:foreground="@drawable/item_border"
+                    android:padding="2dp"
+                    android:src="@mipmap/example_avatar"
+                    app:layout_constraintBottom_toBottomOf="@+id/hero_relation_hero1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/hero_relation_hero1"
+                    app:layout_constraintTop_toTopOf="@+id/hero_relation_hero1" />
+
+                <TextView
+                    android:id="@+id/hero_relation_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hero_relation_hero1"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorTip"
+                    android:padding="5dp"
+                    tool:text="鬼谷子的2技能能够创造出方便沈梦溪打出群体伤害的环境"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/hero_relation_hero2" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/hero_story_ly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hero_relation_content">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/detail_title_border" />
+
+                <TextView
+                    android:id="@+id/hero_story_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="英雄故事"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTip"
+                app:layout_constraintTop_toBottomOf="@+id/hero_story_ly" />
+
+            <TextView
+                android:id="@+id/hero_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@+id/hero_story_ly"
+                tool:text="英雄故事" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

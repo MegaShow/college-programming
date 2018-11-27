@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "studio.xmatrix.qqpvp.assistant"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    // 搜索
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    // Dagger2
+    implementation 'com.google.dagger:dagger:2.19'
+    implementation 'com.google.dagger:dagger-android:2.19'
+    implementation 'com.google.dagger:dagger-android-support:2.19'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.19"
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Round Corner Progress Bar
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+
+    // jsoup
+    implementation 'org.jsoup:jsoup:1.11.3'
+
+    // ObjectBox
+    debugImplementation 'io.objectbox:objectbox-android-objectbrowser:2.2.0'
+    releaseImplementation 'io.objectbox:objectbox-android:2.2.0'
+
+    // 列表动画
+    // noinspection GradleDependency
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.6'
+
+    // 侧滑布局
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    // gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
+
+    // 下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'io.objectbox'

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="studio.xmatrix.qqpvp.assistant.ui.fragment.detail.EquipmentHandler" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/detail_title_border" />
+
+                <TextView
+                    android:id="@+id/equipment_recommend_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="推荐出装"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/equipment_refresh"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/ic_equipment_refresh" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTip" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_1"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toStartOf="@id/equip_layout_2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/equipment1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp"
+                            android:src="@mipmap/example_avatar"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/equipment_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#333333"
+                            tools:text="暴躁节奏啊" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_2"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/equip_layout_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/equip_layout_1"
+                        app:layout_constraintTop_toTopOf="@+id/equip_layout_1">
+
+                        <ImageView
+                            android:id="@+id/equipment2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:id="@+id/equipment_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            tools:text="暴躁节奏"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/equipment2"
+                            app:layout_constraintStart_toEndOf="@+id/equipment2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_3"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toStartOf="@id/equip_layout_2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/equip_layout_1">
+
+                        <ImageView
+                            android:id="@+id/equipment3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:id="@+id/equipment_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            tools:text="暴躁节奏"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/equipment3"
+                            app:layout_constraintStart_toEndOf="@id/equipment3"
+                            app:layout_constraintTop_toTopOf="@id/equipment3" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_4"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/equip_layout_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/equip_layout_3"
+                        app:layout_constraintTop_toTopOf="@+id/equip_layout_3">
+
+                        <ImageView
+                            android:id="@+id/equipment4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:id="@+id/equipment_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            tools:text="暴躁节奏"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/equipment4"
+                            app:layout_constraintStart_toEndOf="@+id/equipment4"
+                            app:layout_constraintTop_toTopOf="@+id/equipment4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_5"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toStartOf="@id/equip_layout_2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/equip_layout_3">
+
+                        <ImageView
+                            android:id="@+id/equipment5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:id="@+id/equipment_text5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            tools:text="暴躁节奏"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/equipment5"
+                            app:layout_constraintStart_toEndOf="@id/equipment5"
+                            app:layout_constraintTop_toTopOf="@+id/equipment5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/equip_layout_6"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/equip_layout_5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/equip_layout_5"
+                        app:layout_constraintTop_toTopOf="@+id/equip_layout_5">
+
+                        <ImageView
+                            android:id="@+id/equipment6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:foreground="@drawable/item_border_other"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:id="@+id/equipment_text6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            tools:text="暴躁节奏"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/equipment6"
+                            app:layout_constraintStart_toEndOf="@+id/equipment6"
+                            app:layout_constraintTop_toTopOf="@+id/equipment6" />
+
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/equipment_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/colorTip"
+                    android:padding="5dp"
+                    android:text="利用被动清理兵线，可以节约部分炸弹，以免团战时炸弹数量不足"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="10dp"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/detail_title_border" />
+
+                <TextView
+                    android:id="@+id/inscription_recommend_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="推荐铭文"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorTip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/inscription_recommend_img1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="8dp"
+                        android:src="@mipmap/example_inscription"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="梦魇"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/inscription_recommend_img1" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_attr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="法术穿透+2.4"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/inscription_recommend_img2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="8dp"
+                        android:src="@mipmap/example_inscription"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="梦魇"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/inscription_recommend_img1" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_attr2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="法术穿透+2.4"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/inscription_recommend_img3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="8dp"
+                        android:src="@mipmap/example_inscription"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="梦魇"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/inscription_recommend_img1" />
+
+                    <TextView
+                        android:id="@+id/inscription_recommend_attr3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="法术穿透+2.4"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/inscription_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/colorTip"
+                android:padding="5dp"
+                android:text="利用被动清理兵线，可以节约部分炸弹，以免团战时炸弹数量不足"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

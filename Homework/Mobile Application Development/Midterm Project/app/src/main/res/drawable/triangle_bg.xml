@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 正三角 -->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="-70"
+    android:pivotX="90%"
+    android:pivotY="85%"
+    android:toDegrees="45">
+    <shape android:shape="rectangle">
+        <solid android:color="#ffffff" />
+        <stroke
+            android:width="3dp"
+            android:color="#d7a124" />
+    </shape>
+
+</rotate>
