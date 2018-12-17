@@ -1,0 +1,14 @@
+%html
+  %head
+    %title 想要下载的资源
+  %body
+    %h1 想要下载的资源
+    %form{ :method => 'post', :action => '/want' }
+      %div
+        你的昵称
+        %input{ :name => 'userName' }
+      %div
+        资源名字
+        %input{ :name => 'val' }
+      %div
+        %input{ :name => 'submit', :type => 'submit', :value => '提交' }
