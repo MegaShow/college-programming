@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WebAPI</string>
+    <string name="buttonSearchText">搜索</string>
+    <string name="editTextUserIdHint">input user_id</string>
+    <string name="image">Image</string>
+    <string name="playHint">播放:</string>
+    <string name="commentHint">评论:</string>
+    <string name="durationHint">时长:</string>
+    <string name="createHint">创建时间:</string>
+    <string name="bilibili">BiliBili</string>
+    <string name="github">GitHub</string>
+    <string name="githubEditHint">input user_name</string>
+    <string name="nameHint">项目名:</string>
+    <string name="idHint">项目Id:</string>
+    <string name="issueHint">存在问题:</string>
+    <string name="editTitleHint">input issue title</string>
+    <string name="editBodyHint">input issue body</string>
+    <string name="buttonIssueText">添加issue</string>
+    <string name="repoDescription">项目描述: %1$s</string>
+    <string name="issueCreate">创建时间: %1$s</string>
+    <string name="issueState">问题状态: %1$s</string>
+    <string name="issueBody">问题描述: %1$s</string>
+</resources>

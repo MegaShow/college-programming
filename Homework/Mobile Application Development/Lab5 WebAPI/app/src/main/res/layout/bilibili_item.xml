@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.lang.Integer" />
+
+        <variable
+            name="model"
+            type="com.icytown.course.experimentfive.webapi.data.model.Top" />
+
+        <variable
+            name="pvideo"
+            type="com.icytown.course.experimentfive.webapi.data.model.PVideo" />
+
+        <variable
+            name="presenter"
+            type="com.icytown.course.experimentfive.webapi.ui.bilibili.BilibiliPresenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tool:src="@mipmap/example_item" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:onProgressChanged="@{presenter::onProgressChanged}"
+                    android:onStopTrackingTouch="@{presenter::onStopTrackingTouch}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/playHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/playHint"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/play"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+                <TextView
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@{Integer.toString(model.data.play)}"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playHint"
+                    app:layout_constraintEnd_toStartOf="@+id/commentHint"
+                    app:layout_constraintStart_toEndOf="@+id/playHint"
+                    app:layout_constraintTop_toTopOf="@+id/playHint"
+                    tool:text="123456" />
+
+                <TextView
+                    android:id="@+id/commentHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/commentHint"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playHint"
+                    app:layout_constraintEnd_toStartOf="@+id/comment"
+                    app:layout_constraintStart_toEndOf="@+id/play"
+                    app:layout_constraintTop_toTopOf="@+id/playHint" />
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:text="@{Integer.toString(model.data.videoReview)}"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playHint"
+                    app:layout_constraintEnd_toStartOf="@+id/durationHint"
+                    app:layout_constraintStart_toEndOf="@+id/commentHint"
+                    app:layout_constraintTop_toTopOf="@+id/playHint"
+                    tool:text="0" />
+
+                <TextView
+                    android:id="@+id/durationHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/durationHint"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playHint"
+                    app:layout_constraintEnd_toStartOf="@+id/duration"
+                    app:layout_constraintStart_toEndOf="@+id/comment"
+                    app:layout_constraintTop_toTopOf="@+id/playHint" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@{model.data.duration}"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/durationHint"
+                    app:layout_constraintTop_toTopOf="@+id/playHint"
+                    tool:text="02:19" />
+
+                <TextView
+                    android:id="@+id/createHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/createHint"
+                    app:layout_constraintEnd_toStartOf="@+id/create"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/playHint" />
+
+                <TextView
+                    android:id="@+id/create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.data.create}"
+                    app:layout_constraintBottom_toBottomOf="@+id/createHint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/createHint"
+                    app:layout_constraintTop_toTopOf="@+id/createHint"
+                    tool:text="2018-12-08 18:17:00" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@{model.data.title}"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/createHint"
+                    tool:text="Zhenly好强好强好强啊啊" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#73c1cc"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#91dfea"
+                android:padding="10dp"
+                android:text="@{model.data.content}"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tool:text="Hello, world~" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>
