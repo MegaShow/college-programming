@@ -12,7 +12,7 @@ namespace simulated_annealing {
 
     const double T_START = 500;  // 初始温度
     const double T_END = 0.000001; // 终止温度
-    const double Q = 0.96; // 降温系数
+    const double Q = 0.9; // 降温系数
 }
 
 using namespace simulated_annealing;
@@ -21,17 +21,19 @@ using namespace simulated_annealing;
 Result SimulatedAnnealing(const std::vector<Facility> &f, const std::vector<Customer> &c) {
     Result best = Greedy(f, c);
     double t = T_START;
-    for (size_t i = 0; t > T_END; i++) {
-        Result res = generateNeighborSolution(f, c, best);
-        if (best.cost > res.cost) {
-            best = res;
-        } else {
-            std::default_random_engine random(std::chrono::system_clock::now().time_since_epoch().count());
-            std::uniform_real_distribution<> dist(0, 1);
-            double r = dist(random);
-            double p = std::exp((double)(best.cost - res.cost) / t);
-            if (r < p) {
+    while (t > T_END) {
+        for (size_t i = 0; i < 10 * (f.size() + c.size()); i++) {
+            Result res = generateNeighborSolution(f, c, best);
+            if (best.cost > res.cost) {
                 best = res;
+            } else {
+                std::default_random_engine random(std::chrono::system_clock::now().time_since_epoch().count());
+                std::uniform_real_distribution<> dist(0, 1);
+                double r = dist(random);
+                double p = std::exp((double)(best.cost - res.cost) / t);
+                if (r < p) {
+                    best = res;
+                }
             }
         }
         t *= Q;
