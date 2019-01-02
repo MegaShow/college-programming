@@ -1,0 +1,62 @@
+    0 
+    0 Const m = 7, n = 85;
+    1 Var x, y, z, q, r;
+    1 
+    1 Procedure multiply;
+    1 Var a, b;
+    2 Begin
+    3   a := x;
+    5   b := y;
+    7   z := 0;
+    9   While b > 0 Do
+   13     Begin
+   13       If Odd b Then z := z + a;
+   20       a := 2*a ;
+   24       b := b/2 ;
+   28     End
+   28 End;
+   30 
+   30 Procedure divide;
+   30 Var w;
+   31 Begin
+   32   r := x;
+   34   q := 0;
+   36   w := y;
+   38   While w <= r Do
+   42     w := 2*w ;
+   47   While w > y Do
+   51     Begin
+   51       q := 2*q;
+   55       w := w/2;
+   59       If w <= r Then
+   62         Begin
+   63           r := r-w;
+   67           q := q+1
+   69         End
+   71     End
+   71 End;
+   73 
+   73 Procedure gcd;
+   73 Var f, g;
+   74 Begin
+   75   f := x;
+   77   g := y;
+   79   While f <> g Do
+   83     Begin
+   83       If f < g Then g := g-f;
+   91       If g < f Then f := f-g;
+   99     End;
+  100   z := f
+  101 End;
+  103 
+  103 Begin
+  104   read(x, y);
+  106   Call multiply;
+  107   write(z);
+  109   read(x, y);
+  111   Call divide;
+  112   write(q);
+  114   read(x, y);
+  116   Call gcd;
+  117   write(z);
+  119 End.
