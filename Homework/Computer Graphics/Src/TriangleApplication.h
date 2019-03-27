@@ -2,13 +2,14 @@
 
 #include <string>
 
+#include "Application.h"
 #include "Shader.h"
 
-class Application {
+class TriangleApplication: public Application {
 public:
-	Application();
-	~Application();
-	void update();
+	TriangleApplication();
+	~TriangleApplication();
+	virtual void update();
 
 private:
 	void render();

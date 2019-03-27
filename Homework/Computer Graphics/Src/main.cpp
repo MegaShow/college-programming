@@ -7,11 +7,13 @@
 #include <imgui_impl_opengl3.h>
 
 #include "Application.h"
+#include "TriangleApplication.h"
+#include "PointDrawApplication.h"
 
 int main() {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	GLFWwindow* window = glfwCreateWindow(800, 600, "CG Homework", NULL, NULL);
@@ -36,7 +38,11 @@ int main() {
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init(NULL);
 
-	Application app;
+	TriangleApplication* triangleApp = nullptr;
+	PointDrawApplication* pointDrawApp = nullptr;
+
+	Application* app = nullptr;
+	int appType;
 
 	while (!glfwWindowShouldClose(window)) {
 		glfwPollEvents();
@@ -48,7 +54,18 @@ int main() {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		app.update();
+		ImGui::Begin("Application", NULL, ImGuiWindowFlags_AlwaysAutoResize);
+		if (ImGui::RadioButton("Hw2 Triangle", &appType, 0)) {
+			if (!triangleApp) triangleApp = new TriangleApplication();
+			app = triangleApp;
+		}
+		if (ImGui::RadioButton("Hw3 Point Draw", &appType, 1)) {
+			if (!pointDrawApp) pointDrawApp = new PointDrawApplication();
+			app = pointDrawApp;
+		}
+		ImGui::End();
+
+		if (app) app->update();
 
 		ImGui::Render();
 		int display_w, display_h;
@@ -60,6 +77,9 @@ int main() {
 		glfwMakeContextCurrent(window);
 		glfwSwapBuffers(window);
 	}
+
+	delete triangleApp;
+	delete pointDrawApp;
 
 	ImGui_ImplOpenGL3_Shutdown();
 	ImGui_ImplGlfw_Shutdown();

@@ -6,13 +6,13 @@
 #include <GLFW/glfw3.h>
 #include <imgui.h>
 
-#include "Application.h"
+#include "TriangleApplication.h"
 
-const std::string Application::VERTEX_SHADER_FILENAME = "Shader/VertexShader.glsl";
-const std::string Application::VERTEX_WITH_UNIFORM_COLOR_SHADER_FILENAME = "Shader/VertexWithUniformColorShader.glsl";
-const std::string Application::FRAGMENT_SHADER_FILENAME = "Shader/FragmentShader.glsl";
+const std::string TriangleApplication::VERTEX_SHADER_FILENAME = "Shader/Vec3PosVec3Color.vs.glsl";
+const std::string TriangleApplication::VERTEX_WITH_UNIFORM_COLOR_SHADER_FILENAME = "Shader/Vec3PosWithUniColor.vs.glsl";
+const std::string TriangleApplication::FRAGMENT_SHADER_FILENAME = "Shader/Vec3Color.fs.glsl";
 
-Application::Application()
+TriangleApplication::TriangleApplication()
 	: shader(VERTEX_SHADER_FILENAME, FRAGMENT_SHADER_FILENAME),
 	shaderWithUniColor(VERTEX_WITH_UNIFORM_COLOR_SHADER_FILENAME, FRAGMENT_SHADER_FILENAME) {
 
@@ -72,13 +72,13 @@ Application::Application()
 	shaderWithUniColor.setVec3("uniColor", color);
 }
 
-Application::~Application() {
+TriangleApplication::~TriangleApplication() {
 	glDeleteVertexArrays(5, VAOs);
 	glDeleteBuffers(5, VBOs);
 	glDeleteBuffers(1, &EBO);
 }
 
-void Application::update() {
+void TriangleApplication::update() {
 	ImGui::Begin("Settings", NULL, ImGuiWindowFlags_AlwaysAutoResize);
 	ImGui::RadioButton("Point", &objectType, 0);
 	ImGui::RadioButton("Line", &objectType, 1);
@@ -100,7 +100,7 @@ void Application::update() {
 	render();
 }
 
-void Application::render() {
+void TriangleApplication::render() {
 	switch (objectType) {
 	case 0:
 		shader.use();
