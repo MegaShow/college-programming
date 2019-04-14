@@ -1,5 +1,4 @@
 #version 450 core
-
 layout (location = 0) in vec3 p;
 
 uniform vec3 uniColor;

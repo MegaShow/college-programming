@@ -9,6 +9,7 @@
 #include "Application.h"
 #include "TriangleApplication.h"
 #include "PointDrawApplication.h"
+#include "TransformApplication.h"
 
 int main() {
 	glfwInit();
@@ -40,6 +41,7 @@ int main() {
 
 	TriangleApplication* triangleApp = nullptr;
 	PointDrawApplication* pointDrawApp = nullptr;
+	TransformApplication* transformApp = nullptr;
 
 	Application* app = nullptr;
 	int appType;
@@ -52,7 +54,7 @@ int main() {
 		ImGui::NewFrame();
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		ImGui::Begin("Application", NULL, ImGuiWindowFlags_AlwaysAutoResize);
 		if (ImGui::RadioButton("Hw2 Triangle", &appType, 0)) {
@@ -62,6 +64,10 @@ int main() {
 		if (ImGui::RadioButton("Hw3 Point Draw", &appType, 1)) {
 			if (!pointDrawApp) pointDrawApp = new PointDrawApplication();
 			app = pointDrawApp;
+		}
+		if (ImGui::RadioButton("Hw4 Transformation", &appType, 2)) {
+			if (!transformApp) transformApp = new TransformApplication();
+			app = transformApp;
 		}
 		ImGui::End();
 

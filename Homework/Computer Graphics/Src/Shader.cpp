@@ -70,6 +70,14 @@ void Shader::setVec3(const std::string& key, float* value) {
 	glUniform3fv(glGetUniformLocation(id, key.c_str()), 1, value);
 }
 
+void Shader::setGlmVec3(const std::string& key, glm::vec3& value) {
+	glUniform3fv(glGetUniformLocation(id, key.c_str()), 1, &value[0]);
+}
+
+void Shader::setGlmMat4(const std::string& key, glm::mat4& value) {
+	glUniformMatrix4fv(glGetUniformLocation(id, key.c_str()), 1, GL_FALSE, &value[0][0]);
+}
+
 std::string Shader::loadFile(const std::string filename) {
 	std::ifstream in(filename);
 	if (!in) {
