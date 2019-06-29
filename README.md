@@ -10,7 +10,3 @@
 | Homework | 作业 |
 | OJ       | 各种OJ的代码 |
 | Project  | 各种小程序 |
-
-## Release
-
-[SylToDo v1.0.2.0](https://github.com/MegaShow/college-programming/releases/tag/SylToDo)
